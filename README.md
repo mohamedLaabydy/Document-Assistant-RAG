@@ -7,7 +7,13 @@ For this project, we tested the system on an excerpt from an article written by 
 
 Flan-T5, on the other hand, delivered good results with the proposed questions. Additionally, I implemented an interactive interface using Gradio, allowing users to upload documents and pose questions interactively.
 
-Future improvements to the system could include testing more robust models like Mistral or Falcon and enhancing the system's efficiency when dealing with more complex documents, such as legal or technical texts.
+## Future Improvements
+Potential improvements for the system include:
+
+1. Testing more robust models: Incorporating advanced models such as Mistral or Falcon to enhance performance.
+2. Handling more complex documents: Improving the system's efficiency on technical or legal texts.
+3. Language-specific optimization: Adapting the system to better process French-language documents. Given the current limitations of the model with French, it is expected to perform with greater robustness and reliability when used in English.
+
 ## Requirements
 - Python 3.9 or later
 - Docker (optional, for containerized deployment)
@@ -56,3 +62,35 @@ If you prefer to run the program locally without Docker:
    python src/gradioUI.py      # to run the interface 
    python src/app.py           # to run the application
 
+
+## Example Usage
+### Input Document 
+The assistant processes documents provided as text files. A sample input file (data/texts.txt) contains the following content:
+```vbnet
+[...] Avec 588 demandes de brevets effectuées l'an dernier, l'équipementier automobile Valeo a été le premier déposant français en Europe en 2022. C'est notamment la mutation du monde automobile vers l'électrification qui explique ce dynamisme. [...]
+```
+### Query 
+When you run the program and ask: 
+```bash 
+Combien de demandes de brevets Valeo a-t-il fait en 2022 ?
+```
+### Output  
+The assistant will generate the response:
+```mathematica
+588
+```
+
+
+
+## Customization 
+You can configure key parameters (e.g., models, chunk size) in the src/config.yaml file: 
+```yaml
+embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+generation_model: "google/flan-t5-large"
+chunk_size: 200
+chunk_overlap: 50
+input_file: "data/sample_texts.txt"
+```
+
+## Licence 
+This project is open-source and licensed under MIT License.
