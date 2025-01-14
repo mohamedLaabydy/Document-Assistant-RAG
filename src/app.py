@@ -1,9 +1,12 @@
 from document_handler import prepare_documents
 from model_pipeline import setup_rag_pipeline, query_rag_pipeline
+import os
 
 def main():
     # Load and prepare documents
-    documents = prepare_documents("../data/texts.txt")
+    current_dir = os.path.dirname(os.path.abspath(__file__))  # Répertoire de app.py
+    data_path = os.path.join(current_dir, "../data/texts.txt")
+    documents = prepare_documents(data_path)
     
     # Initialize the RAG pipeline
     rag_pipeline = setup_rag_pipeline(documents)
