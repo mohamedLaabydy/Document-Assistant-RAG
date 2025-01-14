@@ -10,7 +10,7 @@ def main():
     
     # Ask a question
     query = "Qui est l'auteur de l'article ?"
-    # d'autres questions possible : 
+    # d'autres questions à poser : 
     """
     Qui est l'auteur de l'article ?
     Quelle est la date de publication de l'article ?
