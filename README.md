@@ -44,7 +44,7 @@ If you prefer to run the program locally without Docker:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/rag-document-assistant.git
+   git clone https://github.com/mohamedLaabydy/Document-Assistant-RAG.git
    cd rag-document-assistant
 
 2. Set up a Python virtual environment (optional but recommended): 
