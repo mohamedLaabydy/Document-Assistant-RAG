@@ -1,0 +1,12 @@
+# Configuration file for RAG Document Assistant
+
+# Model settings
+embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+generation_model: "google/flan-t5-large"
+
+# Document settings
+chunk_size: 200
+chunk_overlap: 50
+
+# Data paths
+input_file: "data/texts.txt"
