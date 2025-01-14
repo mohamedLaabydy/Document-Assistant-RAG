@@ -3,7 +3,7 @@ from model_pipeline import setup_rag_pipeline, query_rag_pipeline
 
 def main():
     # Load and prepare documents
-    documents = prepare_documents("data/texts.txt")
+    documents = prepare_documents("./data/texts.txt")
     
     # Initialize the RAG pipeline
     rag_pipeline = setup_rag_pipeline(documents)
